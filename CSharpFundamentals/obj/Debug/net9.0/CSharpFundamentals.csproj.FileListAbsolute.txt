@@ -1,0 +1,14 @@
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/bin/Debug/net9.0/CSharpFundamentals
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/bin/Debug/net9.0/CSharpFundamentals.deps.json
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/bin/Debug/net9.0/CSharpFundamentals.runtimeconfig.json
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/bin/Debug/net9.0/CSharpFundamentals.dll
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/bin/Debug/net9.0/CSharpFundamentals.pdb
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/obj/Debug/net9.0/CSharpFundamentals.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/obj/Debug/net9.0/CSharpFundamentals.AssemblyInfoInputs.cache
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/obj/Debug/net9.0/CSharpFundamentals.AssemblyInfo.cs
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/obj/Debug/net9.0/CSharpFundamentals.csproj.CoreCompileInputs.cache
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/obj/Debug/net9.0/CSharpFundamentals.dll
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/obj/Debug/net9.0/refint/CSharpFundamentals.dll
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/obj/Debug/net9.0/CSharpFundamentals.pdb
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/obj/Debug/net9.0/CSharpFundamentals.genruntimeconfig.cache
+/Users/lausdio/Desktop/Code/CSharpFundamentals/CSharpFundamentals/obj/Debug/net9.0/ref/CSharpFundamentals.dll
