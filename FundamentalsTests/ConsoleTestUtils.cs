@@ -52,5 +52,26 @@ namespace Fundamentals.Tests
                 Console.SetOut(oldOut);
             }
         }
+        public static T RunWithIo<T>(Func<T> func, string input, out string consoleOut)
+        {
+            var oldIn = Console.In;
+            var oldOut = Console.Out;
+
+            try
+            {
+                using var reader = new StringReader(input);
+                using var writer = new StringWriter();
+                Console.SetIn(reader);
+                Console.SetOut(writer);
+                var result = func();
+                consoleOut = writer.ToString();
+                return result;
+            }
+            finally
+            {
+                Console.SetIn(oldIn);
+                Console.SetOut(oldOut);
+            }
+        }
     }
 }

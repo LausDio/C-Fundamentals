@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 namespace Fundamentals.FirstLesson
 {
-    internal class Task1
+    internal class LessonOne
     {
         // 1) Simple calculator (int math + safe division + optional real division)
         public static void SimpleCalc()
@@ -76,23 +76,13 @@ namespace Fundamentals.FirstLesson
             string name = (Console.ReadLine() ?? string.Empty).Trim();
             if (name.Length == 0) name = "friend";
 
-            int age = InputCheck.ReadInt($"How old are you, {name}? ");
-            if (age < 0)
-            {
-                Console.WriteLine("Age cannot be negative.");
-                return;
-            }
+            int age = InputCheck.ReadNonNegativeInt($"How old are you, {name}? ");
             Console.WriteLine($"Hello {name}, you are {age} years old :)");
         }
         // 6) Circle/sphere calculations (PI, invariant formatting, non-negative radius)
         public static void CircleCalculations()
         {
-            double radius = InputCheck.ReadDouble("Enter the radius of the circle (double): ");
-            if (radius < 0)
-            {
-                Console.WriteLine("Radius cannot be negative.");
-                return;
-            }
+            double radius = InputCheck.ReadNonNegativeDouble("Enter the radius of the circle (double): ");
             double circumference = 2 * Math.PI * radius;
             double area = Math.PI * Math.Pow(radius, 2);
             double sphereVolume = (4.0 / 3.0) * Math.PI * Math.Pow(radius, 3);
@@ -104,7 +94,7 @@ namespace Fundamentals.FirstLesson
         // 7) Square metrics
         public static void SquareMetrics()
         {
-            int length = InputCheck.ReadInt("Enter the side length of the square (integer): ");
+            int length = InputCheck.ReadNonNegativeInt("Enter the side length of the square (integer): ");
             int area = length * length;
             int perimeter = 4 * length;
             Console.WriteLine($"Area: {area}");
