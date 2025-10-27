@@ -1,7 +1,4 @@
-﻿using System;
-using Xunit;
-using Fundamentals.FirstLesson;
-
+﻿using Fundamentals.FirstLesson;
 namespace Fundamentals.Tests
 {
     [Collection("InvariantCulture")]
@@ -12,7 +9,7 @@ namespace Fundamentals.Tests
         public void SimpleCalc_NonZero_PrintsAllOps_IntAndRealDivision()
         {
             string input = "7\n2\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.SimpleCalc, input);
+            string output = ConsoleTestUtils.RunWithIo(SimpleCalc.Run, input);
 
             Assert.Contains("a+b = 9", output);
             Assert.Contains("a-b = 5", output);
@@ -25,7 +22,7 @@ namespace Fundamentals.Tests
         public void SimpleCalc_DivideByZero_PrintsFriendlyMessage_AndNoOtherDivisionLines()
         {
             string input = "7\n0\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.SimpleCalc, input);
+            string output = ConsoleTestUtils.RunWithIo(SimpleCalc.Run, input);
 
             Assert.Contains("a/b = undefined (division by zero)", output);
             Assert.DoesNotContain("a/b (integer)", output);
@@ -37,7 +34,7 @@ namespace Fundamentals.Tests
         public void AskHowAreYou_Blank_PrintsDefaultMessage()
         {
             string input = "\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.AskHowAreYou, input);
+            string output = ConsoleTestUtils.RunWithIo(AskHowAreYou.Run, input);
             Assert.Contains("assume you're fine", output, StringComparison.OrdinalIgnoreCase);
         }
 
@@ -45,7 +42,7 @@ namespace Fundamentals.Tests
         public void AskHowAreYou_Text_Echoes()
         {
             string input = "great\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.AskHowAreYou, input);
+            string output = ConsoleTestUtils.RunWithIo(AskHowAreYou.Run, input);
             Assert.Contains("You are great", output);
         }
 
@@ -54,7 +51,7 @@ namespace Fundamentals.Tests
         public void ReadThreeChars_TooShort_ShowsHint()
         {
             string input = "ab\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.ReadThreeChars, input);
+            string output = ConsoleTestUtils.RunWithIo(ReadThreeChars.Run, input);
             Assert.Contains("Please enter at least three characters.", output);
         }
 
@@ -62,7 +59,7 @@ namespace Fundamentals.Tests
         public void ReadThreeChars_Valid_PrintsFirstThree()
         {
             string input = "abcd\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.ReadThreeChars, input);
+            string output = ConsoleTestUtils.RunWithIo(ReadThreeChars.Run, input);
             Assert.Contains("You entered a, b, c", output);
         }
 
@@ -71,7 +68,7 @@ namespace Fundamentals.Tests
         public void ArePositive_BothPositive_PrintsPositive()
         {
             string input = "5\n6\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.ArePositive, input);
+            string output = ConsoleTestUtils.RunWithIo(ArePositive.Run, input);
             Assert.Contains("Both numbers are positive", output);
         }
 
@@ -79,7 +76,7 @@ namespace Fundamentals.Tests
         public void ArePositive_NotBothPositive_PrintsNotPositive()
         {
             string input = "5\n-1\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.ArePositive, input);
+            string output = ConsoleTestUtils.RunWithIo(ArePositive.Run, input);
             Assert.Contains("At least one number is not positive", output);
         }
 
@@ -89,7 +86,7 @@ namespace Fundamentals.Tests
         {
             // name: Bob, age: -2 (invalid), then 30 (valid)
             string input = "Bob\n-2\n30\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.Age, input);
+            string output = ConsoleTestUtils.RunWithIo(Age.Run, input);
 
             Assert.Contains("non-negative", output, StringComparison.OrdinalIgnoreCase);
             Assert.Contains("Hello Bob, you are 30 years old :)", output);
@@ -101,7 +98,7 @@ namespace Fundamentals.Tests
         {
             // radius: -1 (invalid), then 3 (valid)
             string input = "-1\n3\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.CircleCalculations, input);
+            string output = ConsoleTestUtils.RunWithIo(CircleCalculations.Run, input);
 
             // The non-negative double reader should complain first:
             Assert.Contains("non-negative", output, StringComparison.OrdinalIgnoreCase);
@@ -116,7 +113,7 @@ namespace Fundamentals.Tests
         public void CircleCalculations_Radius3_RoundsAwayFromZeroAt2dp()
         {
             string input = "3\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.CircleCalculations, input);
+            string output = ConsoleTestUtils.RunWithIo(CircleCalculations.Run, input);
 
             Assert.Contains("length: 18.85", output);
             Assert.Contains("area: 28.27", output);
@@ -128,7 +125,7 @@ namespace Fundamentals.Tests
         public void SquareMetrics_Length5_PrintsAreaAndPerimeter()
         {
             string input = "5\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.SquareMetrics, input);
+            string output = ConsoleTestUtils.RunWithIo(SquareMetrics.Run, input);
 
             Assert.Contains("Area: 25", output);
             Assert.Contains("Perimeter: 20", output);
@@ -138,7 +135,7 @@ namespace Fundamentals.Tests
         public void SquareMetrics_NegativeThenValid_ShowsNonNegativeWarning_ThenPrints()
         {
             string input = "-3\n5\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonOne.SquareMetrics, input);
+            string output = ConsoleTestUtils.RunWithIo(SquareMetrics.Run, input);
 
             Assert.Contains("non-negative", output, StringComparison.OrdinalIgnoreCase);
             Assert.Contains("Area: 25", output);

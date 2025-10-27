@@ -1,7 +1,5 @@
 /* 8) Identify enum TestCaseStatus {Pass, Fail, Blocked, WP, Unexecuted}.
 Assign status “Pass” for variable test1Status and output result on the console.*/
-using System;
-using System.Globalization;
 namespace Fundamentals.SecondLesson
 {
     internal class TestStatus

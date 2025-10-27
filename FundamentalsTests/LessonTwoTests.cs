@@ -1,5 +1,3 @@
-using System;
-using Xunit;
 using Fundamentals.SecondLesson;
 
 namespace Fundamentals.Tests

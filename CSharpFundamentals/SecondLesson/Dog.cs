@@ -1,6 +1,4 @@
 // 4) Read Dog info and print it
-using System;
-using System.Globalization;
 namespace Fundamentals.SecondLesson
 {
     struct Dog

@@ -1,8 +1,4 @@
-using System;
 using System.Globalization;
-using System.IO;
-using Xunit;
-using Fundamentals; // <- your InputCheck namespace
 
 namespace Fundamentals.Tests
 {

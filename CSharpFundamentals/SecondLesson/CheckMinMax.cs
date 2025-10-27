@@ -1,6 +1,4 @@
 // 2) Find min and max of 3 integers
-using System;
-using System.Globalization;
 namespace Fundamentals.SecondLesson
 {
     internal class CheckMinMax

@@ -1,7 +1,5 @@
 /* 5) Enter two integers numbers and check if they can represent the day and month.
         Output result on the console.*/
-using System;
-using System.Globalization;
 namespace Fundamentals.SecondLesson
 {
     internal class CheckDate

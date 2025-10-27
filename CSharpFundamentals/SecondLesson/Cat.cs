@@ -1,8 +1,6 @@
 /* 11) Create class Cat. The cat should have a property "fullness level" and method "eat
 something". Create enum Food (fish, mouse, ...). Each type of food should change the
 level of satiety differently.*/
-using System;
-using System.Globalization;
 namespace Fundamentals.SecondLesson
 {
     public class Cat

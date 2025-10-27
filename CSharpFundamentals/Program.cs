@@ -1,5 +1,4 @@
-﻿using System;
-using Fundamentals.FirstLesson;
+﻿using Fundamentals.FirstLesson;
 using Fundamentals.SecondLesson;
 namespace Fundamentals
 {
@@ -46,13 +45,13 @@ namespace Fundamentals
 
             switch (task)
             {
-                case "1": LessonOne.SimpleCalc(); break;
-                case "2": LessonOne.AskHowAreYou(); break;
-                case "3": LessonOne.ReadThreeChars(); break;
-                case "4": LessonOne.ArePositive(); break;
-                case "5": LessonOne.Age(); break;
-                case "6": LessonOne.CircleCalculations(); break;
-                case "7": LessonOne.SquareMetrics(); break;
+                case "1": SimpleCalc.Run(); break;
+                case "2": AskHowAreYou.Run(); break;
+                case "3": ReadThreeChars.Run(); break;
+                case "4": ArePositive.Run(); break;
+                case "5": Age.Run(); break;
+                case "6": CircleCalculations.Run(); break;
+                case "7": SquareMetrics.Run(); break;
                 default: Console.WriteLine("Invalid task."); break;
             }
         }
@@ -77,7 +76,7 @@ namespace Fundamentals
                 case "7": Greeting.Run(); break;
                 case "8": TestStatus.Run(); break;
                 case "9": RGB.TwoColors(); break;
-                case "10": Student.GroupOfStudents(); break;
+                case "10": StudentFilter.Run(); break;
                 case "11": Cat.GreetCat(); break;
                 default: Console.WriteLine("Invalid task."); break;
             }

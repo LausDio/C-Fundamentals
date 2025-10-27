@@ -1,6 +1,4 @@
 // 3) Show HTTP error name by code (400–404)
-using System;
-using System.Globalization;
 namespace Fundamentals.SecondLesson
 {
     internal class CheckHttpError

@@ -1,6 +1,4 @@
 // 1) Check if 3 floats are in range [-5, 5]
-using System;
-using System.Globalization;
 namespace Fundamentals.SecondLesson
 {
     internal class CheckRange
