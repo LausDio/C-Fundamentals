@@ -68,10 +68,17 @@ namespace Fundamentals
 
             switch (task)
             {
-                case "1": LessonTwo.CheckRange(); break;
-                case "2": LessonTwo.CheckMinMax(); break;
-                case "3": LessonTwo.CheckHttpError(); break;
-                case "4": LessonTwo.ShowDogInfo(); break;
+                case "1": CheckRange.Run(); break;
+                case "2": CheckMinMax.Run(); break;
+                case "3": CheckHttpError.Run(); break;
+                case "4": Dog.ShowDogInfo(); break;
+                case "5": CheckDate.Run(); break;
+                case "6": SumOfDigits.Run(); break;
+                case "7": Greeting.Run(); break;
+                case "8": TestStatus.Run(); break;
+                case "9": RGB.TwoColors(); break;
+                case "10": Student.GroupOfStudents(); break;
+                case "11": Cat.GreetCat(); break;
                 default: Console.WriteLine("Invalid task."); break;
             }
         }

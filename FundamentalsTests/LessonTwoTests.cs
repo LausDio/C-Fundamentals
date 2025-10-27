@@ -12,7 +12,7 @@ namespace Fundamentals.Tests
         {
             // 3 valid numbers in [-5, 5]
             string input = "1\n2\n3\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonTwo.CheckRange, input);
+            string output = ConsoleTestUtils.RunWithIo(CheckRange.Run, input);
             Assert.Contains("True", output);
         }
 
@@ -21,7 +21,7 @@ namespace Fundamentals.Tests
         public static void CheckMinMax_ReturnsCorrectMaxMin()
         {
             string input = "3\n7\n1\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonTwo.CheckMinMax, input);
+            string output = ConsoleTestUtils.RunWithIo(CheckMinMax.Run, input);
             Assert.Contains("max: 7", output);
             Assert.Contains("min: 1", output);
         }
@@ -36,7 +36,7 @@ namespace Fundamentals.Tests
         public static void CheckHttpError_ValidCodes_ShowCorrectName(string input, string expected)
         {
             // Should accept a single valid code (within 400–404)
-            string output = ConsoleTestUtils.RunWithIo(LessonTwo.CheckHttpError, input);
+            string output = ConsoleTestUtils.RunWithIo(CheckHttpError.Run, input);
             Assert.Contains(expected, output);
         }
 
@@ -45,7 +45,7 @@ namespace Fundamentals.Tests
         {
             // First line is out of range (405), second line valid (400)
             string input = "405\n400\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonTwo.CheckHttpError, input);
+            string output = ConsoleTestUtils.RunWithIo(CheckHttpError.Run, input);
 
             // Message produced by ReadIntInRange when out of allowed range
             Assert.Contains("between 400 and 404", output);
@@ -58,7 +58,7 @@ namespace Fundamentals.Tests
         public static void ShowDogInfo_PrintsAllDogData_WhenAgeValid()
         {
             string input = "Rex\nexcellent\n5\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonTwo.ShowDogInfo, input);
+            string output = ConsoleTestUtils.RunWithIo(Dog.ShowDogInfo, input);
 
             Assert.Contains("Name: Rex", output);
             Assert.Contains("mark: excellent", output);
@@ -70,7 +70,7 @@ namespace Fundamentals.Tests
         {
             // Age: -1 (invalid) then 3 (valid)
             string input = "Milo\ngood\n-1\n3\n";
-            string output = ConsoleTestUtils.RunWithIo(LessonTwo.ShowDogInfo, input);
+            string output = ConsoleTestUtils.RunWithIo(Dog.ShowDogInfo, input);
 
             // Message produced by ReadNonNegativeInt on a negative value
             Assert.Contains("non-negative", output, StringComparison.OrdinalIgnoreCase);

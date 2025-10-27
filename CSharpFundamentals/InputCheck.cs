@@ -215,5 +215,16 @@ namespace Fundamentals
                     throw new InvalidOperationException("Maximum retry limit reached for ReadFloatInRange.");
             }
         }
+        public static bool AreAllInRange(float min, float max, params float[] numbers)
+        {
+            foreach (float n in numbers)
+            {
+                if (n < min || n > max)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
