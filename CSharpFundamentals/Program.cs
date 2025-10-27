@@ -6,6 +6,7 @@ namespace Fundamentals
     {
         private static void Main(string[] args)
         {
+            Console.WriteLine(5.11 % 10);   
             Console.WriteLine("Select lesson:");
             Console.WriteLine("1 - Lesson One");
             Console.WriteLine("2 - Lesson Two");
@@ -62,6 +63,13 @@ namespace Fundamentals
             Console.WriteLine("2 - Find min/max");
             Console.WriteLine("3 - HTTP error info");
             Console.WriteLine("4 - Dog info");
+            Console.WriteLine("5 - Check if number is a date");
+            Console.WriteLine("6 - Find a sum of the first 2 digits");
+            Console.WriteLine("7 - Greetings");
+            Console.WriteLine("8 - Show status");
+            Console.WriteLine("9 - Show colors");
+            Console.WriteLine("10 - Show students in a group");
+            Console.WriteLine("11 - Feed a cat");
             Console.Write("Choice: ");
             string? task = Console.ReadLine();
 
@@ -75,7 +83,7 @@ namespace Fundamentals
                 case "6": SumOfDigits.Run(); break;
                 case "7": Greeting.Run(); break;
                 case "8": TestStatus.Run(); break;
-                case "9": RGB.TwoColors(); break;
+                case "9": RGBColors.TwoColors(); break;
                 case "10": StudentFilter.Run(); break;
                 case "11": Cat.GreetCat(); break;
                 default: Console.WriteLine("Invalid task."); break;

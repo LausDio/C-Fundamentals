@@ -4,9 +4,9 @@ namespace Fundamentals.SecondLesson
 {
     internal class TestStatus
     {
-                private enum TestCaseStatus
+        private enum TestCaseStatus
         {
-            Pass = 300,
+            Pass,
             Fail,
             Blocked,
             WP,
@@ -14,7 +14,10 @@ namespace Fundamentals.SecondLesson
         }
         public static void Run()
         {
+            TestCaseStatus test1Status = TestCaseStatus.Pass;
 
+            Console.WriteLine("🧪 Test case #1 result:");
+            Console.WriteLine($"Status: {test1Status}");
         }
     }
 }
